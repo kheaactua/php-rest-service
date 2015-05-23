@@ -1049,7 +1049,7 @@ class Server
                     'type' => $phpDocParam['type']
                 );
 
-                if ($pRegMatches && is_array($pRegMatches) && $pRegMatches[$c]) {
+                if ($pRegMatches && is_array($pRegMatches) && isset($pRegMatches[$c]) && $pRegMatches[$c]) {
                     $parameter['fromRegex'] = '$'.($c+1);
                 }
 
